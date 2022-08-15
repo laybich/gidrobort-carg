@@ -1,0 +1,25 @@
+@keyframes arrow {
+	0% {
+		@include tr(0, 0, 0);
+	}
+	50% {
+		@include tr(0, 7px, 0);
+	}
+	100% {
+		@include tr(0, 0, 0);
+	}
+}
+
+@keyframes ripple {
+	0% {
+		@include scale(0);
+		background: rgba(255, 255, 255, 0.8);
+	}
+	35% {
+		background: rgba(255, 255, 255, 0);
+	}
+	100% {
+		@include scale(10);
+		background: rgba(255, 255, 255, 0);
+	}
+}

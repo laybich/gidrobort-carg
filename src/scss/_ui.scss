@@ -1,0 +1,233 @@
+//===============================================================================================================================
+.ibg {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	img {
+		display: none !important;
+	}
+}
+//===============================================================================================================================
+.slick-slider {
+	position: relative;
+	.slick-track,
+	.slick-list {
+	}
+	.slick-list {
+		overflow: hidden;
+	}
+	.slick-track {
+		@include flexbox();
+	}
+	.slick-slide {
+	}
+	.slick-dots {
+		@include flexbox();
+		justify-content: center;
+		li {
+			padding: 10px 5px;
+			cursor: pointer;
+			button {
+				width: 6px;
+				height: 6px;
+				background-color: #fff;
+				border-radius: 50%;
+				transition: background-color 0.2s ease;
+				font-size: 0;
+			}
+			&.slick-active,
+			&:hover {
+				button {
+					background-color: #000;
+				}
+			}
+		}
+		&_yellow {
+			li {
+				button {
+					background-color: #ffb229;
+				}
+			}
+		}
+	}
+	.slick-arrow {
+		position: absolute;
+		background-color: #fff;
+		top: 50%;
+		@include tr(0, -100%, 0);
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		svg {
+			position: absolute;
+			width: 11px;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		&_yellow {
+			background-color: #ffb229;
+		}
+	}
+	.slick-prev {
+		left: -30px;
+		svg {
+			transform: translateY(-50%) rotate(180deg);
+		}
+	}
+	.slick-next {
+		right: -30px;
+	}
+	@media (max-width: 991px) {
+		.slick-arrow {
+			width: 24px;
+			height: 24px;
+			svg {
+				width: 6px;
+			}
+		}
+		.slick-prev {
+			left: -5px !important;
+		}
+		.slick-next {
+			right: -5px !important;
+		}
+	}
+}
+
+//===============================================================================================================================
+h2 {
+	position: relative;
+	font-size: 42px;
+	line-height: 1.23;
+	font-weight: 600;
+	@media (max-width: 1200px) {
+		font-size: 38px;
+	}
+	@media (max-width: 767px) {
+		font-size: 30px;
+	}
+}
+//===============================================================================================================================
+
+.modal {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.6);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.2s ease;
+	padding: 0 20px;
+	overflow-y: auto;
+	&-dialog {
+		transition: transform 0.2s ease;
+		position: absolute;
+		padding: 40px 45px;
+		background-color: #ffc400;
+		top: 0;
+		left: 50%;
+		transform: translate(-50%, -200%);
+		margin: 65px auto;
+		max-width: 560px;
+		width: 100%;
+		z-index: 1;
+	}
+	&.active {
+		opacity: 1;
+		visibility: visible;
+		.modal-dialog {
+			transform: translate(-50%, 0);
+		}
+	}
+	&__list {
+		padding-left: 20px;
+		list-style-type: disc;
+		margin-bottom: 16px;
+		li {
+			list-style-type: disc;
+			display: list-item;
+			font-size: 20px;
+			line-height: 1.55;
+		}
+	}
+	&__button {
+		font-size: 14px;
+		height: 52px;
+		margin: 10px 4px 0;
+		border-radius: 100px;
+		color: #333;
+		border: 2px solid #fff;
+		background-color: #fff;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		max-width: 210px;
+		width: 210px;
+		margin: 0 auto;
+	}
+	// .modal__title
+	&__title {
+		text-align: center;
+		margin-bottom: 11px;
+	}
+	// .modal__text
+	&__text {
+		text-align: center;
+		margin-bottom: 24px;
+	}
+	// .modal__form
+	&__form {
+	}
+	// .modal__politics
+	&__politics {
+		text-align: center;
+		margin-top: 20px;
+	}
+
+	.form_modal {
+		background: none;
+		padding: 0;
+		.form__input {
+			color: #000000;
+			border: 2px solid #333333;
+			background: none;
+			width: 100%;
+			border-radius: 30px;
+			height: 60px !important;
+			padding: 0 20px;
+		}
+		.form__button {
+			background: #fff;
+			height: 60px !important;
+			padding: 0 20px;
+		}
+	}
+
+	&-dialog {
+		padding: 40px 25px;
+	}
+
+	@media (max-width: 991px) {
+		&-dialog {
+			max-width: 465px;
+		}
+	}
+	@media (max-width: 767px) {
+		&-dialog {
+			max-width: 408px;
+		}
+	}
+	@media (max-width: 575px) {
+		&-dialog {
+			max-width: 408px;
+		}
+	}
+}
+
+//===============================================================================================================================
