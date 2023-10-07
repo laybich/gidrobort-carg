@@ -10,15 +10,16 @@
 	"author": "Matvij",
 	"license": "ISC",
 	"devDependencies": {
-		"browser-sync": "^2.26.13",
+		"browser-sync": "^2.29.3",
 		"del": "^6.0.0",
 		"gulp": "^4.0.2",
-		"gulp-autoprefixer": "^7.0.1",
+		"gulp-autoprefixer": "^8.0.0",
 		"gulp-concat": "^2.6.1",
 		"gulp-imagemin": "^7.1.0",
-		"gulp-sass": "^4.1.0",
-		"gulp-uglify-es": "^2.0.0",
-		"jquery": "^3.5.1",
+		"gulp-sass": "^5.1.0",
+		"gulp-uglify-es": "^3.0.0",
+		"jquery": "^3.7.1",
+		"sass": "^1.69.0",
 		"slick-carousel": "^1.8.1"
 	},
 	"dependencies": {
